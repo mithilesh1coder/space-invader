@@ -8,22 +8,28 @@ function Ship(){
         image(img,this.x,this.y,imgWidth,imgHeight);
   }
 
-  this.move = function(){
-    if(dir === -1){
+  this.move = function(dir){
 
-      while(this.x != 0){
-        this.x = this.x - 50;
+
+      if(dir === -1){
+
+
+          this.x = this.x + dir*50;
+
+
       }
 
-    }
+      if(dir === 1){
 
-    if(dir === 1){
 
-      while(this.x != width){
-          this.x = this.x + 50;
+            this.x = this.x + dir*50;
+
+
+
+
       }
 
-    }
+
 
   }
 }
